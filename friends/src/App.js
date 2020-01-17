@@ -11,6 +11,7 @@ import {
 
 import Login from "./components/Login";
 import FriendList from "./components/FriendList";
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           </nav>
           <Switch> 
             <Route path="/login" component={Login} />
-            <Route path="/friends" component={FriendList} />
+            <PrivateRoute path="/friends" component={FriendList} />
             <Route exact path="/">Home</Route>
           </Switch>
         </div>
