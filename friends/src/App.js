@@ -10,10 +10,24 @@ import FriendList from './components/FriendList';
 
 function App() {
   return (
-    <div >
+    <Router >
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to='/'>Login</Link>
+            </li>
+            <li>
+              <Link to='/friends'>Friends List</Link>
+            </li>
+          </ul>
+        </nav>
+
+
+      </div>
       <Login />
       <FriendList />
-    </div>
+    </Router >
   );
 }
 
