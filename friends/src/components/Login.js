@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from 'axios';
 import { axiosWithAuth } from '../utilities/axiosAuth';
 
 const Login = (props) => {
@@ -22,11 +21,21 @@ const onLogin = (event) => {
         })
 }
 
+const handleUser = (event) => {
+    event.preventDefault();
+    setUsername(event.target.value)
+}
+
+const handlePassword = (event) => {
+    event.preventDefault();
+    setPassword(event.target.value)
+}
+
   return (
-    <form>
+    <form onSubmit={onLogin}>
       <h1>Login Component</h1>
-      <input type="username" placeholder="username" ></input>
-      <input type="password" placeholder='password'></input>
+      <input type="username" placeholder="username" onChange={handleUser} ></input>
+      <input type="password" placeholder='password' onChange={handlePassword} ></input>
       <button>Submit</button>
       {isLoading && <p>Patientia...</p>}
     </form>
