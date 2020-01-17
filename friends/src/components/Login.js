@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { axiosWithAuth } from '../utilities/axiosAuth';
 
 const Login = (props) => {
-  const { username, setUsername } = useState("");
-  const { password, setPassword } = useState("");
-  const { isLoading, setIsLoading } = useState("");
+  const [ username, setUsername ] = useState("");
+  const [ password, setPassword ] = useState("");
+  const [ isLoading, setIsLoading ] = useState("");
 
 const onLogin = (event) => {
     event.preventDefault();
@@ -34,8 +34,18 @@ const handlePassword = (event) => {
   return (
     <form onSubmit={onLogin}>
       <h1>Login Component</h1>
-      <input type="username" placeholder="username" onChange={handleUser} ></input>
-      <input type="password" placeholder='password' onChange={handlePassword} ></input>
+      <input 
+        type="username" 
+        placeholder="username" 
+        name="username" 
+        onChange={handleUser} 
+        />
+      <input 
+        type="password" 
+        placeholder='password' 
+        name="password" 
+        onChange={handlePassword} 
+      />
       <button>Submit</button>
       {isLoading && <p>Patientia...</p>}
     </form>
