@@ -22,8 +22,8 @@ function App() {
             </li>
           </ul>
         </nav>
-
-
+        <Route path='/login'></Route>
+        <Route path='/friends'></Route>
       </div>
       <Login />
       <FriendList />
