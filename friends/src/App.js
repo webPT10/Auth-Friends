@@ -5,7 +5,8 @@ import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink,
+  Switch,
   Redirect
 } from "react-router-dom";
 
@@ -30,13 +31,13 @@ function App() {
             </ul>
           </nav>
           <Switch> 
-            <Route path="/login" component={Login}>Login</Route>
-            <Route path="/friends" component={FriendList}>Friend List</Route>
+            <Route path="/login" component={Login} />
+            <Route path="/friends" component={FriendList} />
             <Route exact path="/">Home</Route>
           </Switch>
         </div>
-        <Login />
-        <FriendList />
+        {/* <Login />
+        <FriendList /> */}
       </Router>
   );
 }
