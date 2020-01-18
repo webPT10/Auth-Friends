@@ -1,18 +1,10 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utilities/axiosAuth";
 
-const AddFriendForm = () => {
+const FriendForm = () => {
     const [friend, setFriend ] =useState();
     
   console.log(addFriend);
-
-    handleSubmit(values){
-      event.preventDefault();
-      axiosWithAuth
-        .post('http://localhost:5000/api/friends', values)
-        .then()
-        .catch()
-  }
 
   return (
     <form onSubmit={} >
@@ -23,4 +15,4 @@ const AddFriendForm = () => {
     </form>
   );
 }
-export default AddFriendForm;
+export default FriendForm;

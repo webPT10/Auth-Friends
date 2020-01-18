@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import Login from "./components/Login";
-import FriendList from "./components/FriendList";
+import Friends from "./components/Friends";
 import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         </nav>
         <Switch>
           <Route path="/login" component={Login} />
-          <PrivateRoute path="/friends" component={FriendList} />
+          <PrivateRoute path="/friends" component={Friends} />
           <Route exact path="/" />
         </Switch>
       </div>
