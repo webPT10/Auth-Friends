@@ -1,23 +1,11 @@
-import React, { useState } from 'react';
+import React from "react";
+// import { Link } from 'react-router-dom';
 
-import FriendForm from '../forms/FriendForm';
-
-const FriendCard = () => {
-    const [ friends, setFriends ] = useState([]);
-
-
-    const addFriend = (char) => {
-        setFriends(char)
-    }
-
-    return (
-        <section>
-            <h1>FriendList Component</h1>
-            {!friends && <p>Friends Loading</p>}
-            {friends && friends.map(friend => <span>{friend.name}</span>)}
-
-            <FriendForm addFriend={addFriend} />
-        </section>
-    )
-}
+const FriendCard = ({ friend }) => {
+  return (
+    <div>
+      {friend.name} {friend.email} {friend.age}
+    </div>
+  );
+};
 export default FriendCard;
