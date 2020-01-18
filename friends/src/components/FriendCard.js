@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { axiosWithAuth } from '../utilities/axiosAuth';
 
-import AddFriendForm from '../forms/FriendForm';
+import FriendForm from '../forms/FriendForm';
 
 const FriendCard = () => {
     const [ friends, setFriends ] = useState([]);
@@ -17,7 +16,7 @@ const FriendCard = () => {
             {!friends && <p>Friends Loading</p>}
             {friends && friends.map(friend => <span>{friend.name}</span>)}
 
-            <AddFriendForm addFriend={addFriend} />
+            <FriendForm addFriend={addFriend} />
         </section>
     )
 }
