@@ -11,7 +11,7 @@ const onLogin = (event) => {
 
     console.log()
 
-    axiosWithAuth
+    axiosWithAuth()
         .post('http://localhost:5000/api/login', credentials)
         .then(response => {
             console.log(response)

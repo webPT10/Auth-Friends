@@ -9,7 +9,7 @@ const FriendForm = ({ submitFriend, initialValues }) => {
     setFriend({ ...friend, [event.target.name]: event.target.value });
 
   const handleSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(); 
     submitFriend(friend);
   };
 
